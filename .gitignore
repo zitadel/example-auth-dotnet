@@ -1,0 +1,10 @@
+# Local package/cache directories
+.nuget/
+.dotnet/
+
+# Build outputs
+bin/
+obj/
+
+# Devbox generated files
+.devbox/

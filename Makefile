@@ -13,4 +13,5 @@ test:
 	dotnet test
 
 start:
+	dotnet restore
 	dotnet run

@@ -71,10 +71,7 @@ ZITADEL_POST_LOGOUT_URL="http://localhost:3000/auth/logout/callback"
 Follow these steps to get the application running:
 
 ```bash
-# 1. Install dependencies
-make prepare
-
-# 2. Start the development server
+# Start the development server (restores dependencies automatically)
 make start
 ```
 

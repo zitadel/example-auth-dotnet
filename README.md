@@ -12,7 +12,7 @@ Check out our Example Application to see it in action.
 
 ## Example Application
 
-The example repository includes a complete ASP.NET Core MVC application, ready to run, that demonstrates how to integrate ZITADEL for user authentication.
+The example repository includes a complete ASP.NET Core Razor Pages application, ready to run, that demonstrates how to integrate ZITADEL for user authentication.
 
 This example application showcases a typical web app authentication pattern: users start on a public landing page, click a login button to authenticate with ZITADEL, and are then redirected to a protected profile page displaying their user information. The app also includes secure logout functionality that clears the session and redirects users back to ZITADEL's logout endpoint. All protected routes are automatically secured using the authentication/authorization pipeline and session management, ensuring only authenticated users can access sensitive areas of your application.
 
@@ -22,7 +22,7 @@ Before you begin, ensure you have the following:
 
 #### System Requirements
 
-- .NET SDK 8 or later (devbox provides it)
+- .NET SDK 10 or later (devbox provides it)
 
 #### Account Setup
 

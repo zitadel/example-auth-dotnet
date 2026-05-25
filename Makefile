@@ -13,17 +13,17 @@ help:
 	@echo "  make test      Run tests"
 
 prepare:
-	dotnet restore
+	dotnet restore example-auth-dotnet.slnx
 
 format:
-	dotnet format
+	dotnet format example-auth-dotnet.slnx
 
 lint:
-	dotnet format --verify-no-changes
+	dotnet format example-auth-dotnet.slnx --verify-no-changes
 
 test:
-	dotnet test
+	dotnet test example-auth-dotnet.slnx
 
 start:
-	dotnet restore
+	dotnet restore example-auth-dotnet.slnx
 	dotnet run

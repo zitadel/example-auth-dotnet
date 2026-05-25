@@ -1,6 +1,6 @@
 {
   "name": "Zitadel Example .NET Auth",
-  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
   "forwardPorts": [
     3000
   ],

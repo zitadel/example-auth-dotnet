@@ -23,12 +23,7 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(port);
 });
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddAntiforgery(options =>
-{
-    options.HeaderName = "X-CSRF-TOKEN";
-});
+builder.Services.AddRazorPages();
 
 builder.Services.AddSession(options =>
 {
@@ -59,6 +54,7 @@ builder.Services.AddAuthentication(options =>
     options.SaveTokens = true;
     options.GetClaimsFromUserInfoEndpoint = true;
     options.TokenValidationParameters.NameClaimType = "name";
+    options.RequireHttpsMetadata = !builder.Environment.IsDevelopment();
 
     options.Scope.Clear();
     options.Scope.Add("openid");
@@ -104,15 +100,15 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseStatusCodePagesWithReExecute("/not-found");
-app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapStaticAssets();
+app.MapRazorPages()
+    .WithStaticAssets();
+app.MapControllers();
 
 app.Run();
